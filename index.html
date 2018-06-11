@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Connexion</title>
+    <link rel="preload" href="/fonts/opensans-regular.woff" as="font" type="font/woff">
+    <link rel="preload" href="/fonts/opensans-regular.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/fonts/opensans-bold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/fonts/opensans-bold.woff" as="font" type="font/woff">
+    <link rel="preload" href="/fonts/opensans-extrabold.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/fonts/opensans-extrabold.woff" as="font" type="font/woff">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div style="display:none">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="s-icon-back" viewbox="0 0 240.823 240.823">
+<path id="Chevron_Right" d="M57.633,129.007L165.93,237.268c4.752,4.74,12.451,4.74,17.215,0c4.752-4.74,4.752-12.439,0-17.179
+		l-99.707-99.671l99.695-99.671c4.752-4.74,4.752-12.439,0-17.191c-4.752-4.74-12.463-4.74-17.215,0L57.621,111.816
+		C52.942,116.507,52.942,124.327,57.633,129.007z"></path>
+</symbol><symbol id="s-icon-facebook" viewbox="0 0 32 32"><path d="M18 12V9.619C18 8.544 18.238 8 19.906 8H22V4h-3.494c-4.281 0-5.694 1.963-5.694 5.331V12H9.999v4h2.813v12h5.187V16h3.525l.475-4h-4z"></path></symbol><symbol id="s-icon-mail" viewbox="0 0 32 32"><title>android-mail</title><path d="M27.333 5H4.667A2.675 2.675 0 0 0 2 7.667v16.667c0 1.467 1.2 2.667 2.667 2.667h22.666c1.467 0 2.667-1.2 2.667-2.667V7.667C30 6.2 28.8 5 27.333 5zM27 10.667L16 18 5 10.667V8l11 7.333L27 8v2.667z"></path></symbol><symbol id="s-icon-next" viewbox="0 0 240.823 240.823">
+<path id="Chevron_Right_1_" d="M183.189,111.816L74.892,3.555c-4.752-4.74-12.451-4.74-17.215,0c-4.752,4.74-4.752,12.439,0,17.179
+		l99.707,99.671l-99.695,99.671c-4.752,4.74-4.752,12.439,0,17.191c4.752,4.74,12.463,4.74,17.215,0l108.297-108.261
+		C187.881,124.315,187.881,116.495,183.189,111.816z"></path>
+</symbol><symbol id="s-icon-pin" viewbox="0 0 32 32"><title>android-pin</title><path d="M16 2C10.5 2 6 6.41 6 11.8 6 19.15 16 30 16 30s10-10.85 10-18.2C26 6.41 21.5 2 16 2zm0 13.3c-2 0-3.572-1.54-3.572-3.5S14 8.3 16 8.3s3.572 1.54 3.572 3.5S18 15.3 16 15.3z"></path></symbol><symbol id="s-icon-search" viewbox="0 0 32 32"><title>search</title><path d="M27.813 24.169l-5.3-5.369a9.79 9.79 0 0 0 1.313-4.869c0-5.475-4.45-9.931-9.912-9.931s-9.912 4.456-9.912 9.931c0 5.475 4.45 9.931 9.912 9.931a9.75 9.75 0 0 0 5.006-1.4l5.275 5.35c.119.119.288.194.456.194s.337-.069.456-.194l2.706-2.738a.641.641 0 0 0 0-.906zm-13.901-16.3c3.338 0 6.05 2.719 6.05 6.063s-2.712 6.062-6.05 6.062c-3.338 0-6.05-2.719-6.05-6.063s2.712-6.063 6.05-6.063z"></path></symbol><symbol id="s-icon-telephone" viewbox="0 0 32 32"><title>ios-telephone</title><path d="M25.994 20.969c-.913-.938-3.506-2.694-5.206-2.694-.394 0-.738.087-1.019.269-.831.531-1.494.944-1.813.944-.175 0-.363-.156-.775-.512l-.069-.063c-1.144-.994-1.387-1.25-1.831-1.712l-.113-.119c-.081-.081-.15-.156-.219-.225-.387-.4-.669-.688-1.662-1.813l-.044-.05c-.475-.537-.787-.887-.806-1.144-.019-.25.2-.656.756-1.412.675-.912.7-2.037.081-3.344-.494-1.031-1.3-2.019-2.013-2.888l-.063-.075c-.613-.75-1.325-1.125-2.119-1.125-.881 0-1.612.475-2 .725-.031.019-.063.044-.094.063-.869.55-1.5 1.306-1.737 2.075-.356 1.156-.594 2.656 1.112 5.775 1.475 2.7 2.813 4.512 4.938 6.694 2 2.05 2.888 2.712 4.875 4.15 2.212 1.6 4.337 2.519 5.825 2.519 1.381 0 2.469 0 4.019-1.869 1.625-1.962.95-3.163-.025-4.169z"></path></symbol><symbol id="s-icon-twitter" viewbox="0 0 32 32"><path d="M30.75 6.844c-1.087.481-2.25.806-3.475.956a6.079 6.079 0 0 0 2.663-3.35 12.02 12.02 0 0 1-3.844 1.469A6.044 6.044 0 0 0 21.675 4a6.052 6.052 0 0 0-6.05 6.056c0 .475.05.938.156 1.381A17.147 17.147 0 0 1 3.306 5.106a6.068 6.068 0 0 0 1.881 8.088c-1-.025-1.938-.3-2.75-.756v.075a6.056 6.056 0 0 0 4.856 5.937 6.113 6.113 0 0 1-1.594.212c-.388 0-.769-.038-1.138-.113a6.06 6.06 0 0 0 5.656 4.206 12.132 12.132 0 0 1-8.963 2.507A16.91 16.91 0 0 0 10.516 28c11.144 0 17.231-9.231 17.231-17.238 0-.262-.006-.525-.019-.781a12.325 12.325 0 0 0 3.019-3.138z"></path></symbol></svg>
+    </div>
+    <header class="page-header">
+      <div class="page-header__wrapper-title">
+        <h1 class="title-key page-header__title">
+          IKB
+        </h1>
+      </div>
+      <nav class="page-header__nav main-nav main-nav--nojs">
+        <div class="main-nav__wrapper-menu">
+          <button class="main-nav__toggle" type="button" aria-label="Menu">
+          </button>
+          <a class="main-nav__logo-link">
+            <img class="main-nav__logo-img" src="img/logo.svg" width="47" height="47" alt="Logo Ив-Маляр">
+            <p class="main-nav__logo-text">Ив-Маляр</p>
+          </a>
+        </div>
+        <form class="main-nav__search page-search page-search--nav">
+          <label class="page-search__label page-search__label--nav" for="nav-search">
+            <svg width="22" height="22" aria-hidden="true" role="presentation">
+              <use xlink:href="#s-icon-search"></use>
+            </svg>
+          </label>
+          <input class="page-search__input-text page-search__input-text--nav" type="search" name="main-search" id="nav-search" placeholder="Что вы ищете?">
+        </form>
+        <ul class="main-nav__site-menu site-menu">
+          <li>
+            <a class="site-menu__link" href="#">
+              Палитра
+            </a>
+          </li>
+          <li>
+            <a class="site-menu__link" href="#">
+              Новости
+            </a>
+          </li>
+          <li>
+            <a class="site-menu__link" href="#">
+              О нас
+            </a>
+          </li>
+          <li>
+            <a class="site-menu__link" href="#">
+              Оформить заказ
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <div class="page-main__wrapper">
+        <section class="page-main__posts posts">
+          <h2 class="posts__hiden-title">
+            Последние записи
+          </h2>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="post.html" class="item-post__link">
+                Свет тонкой красоты
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <picture class="item-post__img">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/yves-klein.webp">
+              <source type="image/webp" srcset="img/yves-klein-mobile.webp">
+              <source media="(min-width: 768px)" srcset="img/yves-klein.jpg">
+              <img src="img/yves-klein-mobile.jpg" alt="Ив Кляйн пристально смотрит в камеру, протягивая ладонь прямо ко зрителю. Фото в чб, его ладонь выкрашена в синий">
+            </picture>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Антон Шило
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  3457
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Сколько нужно художников, чтобы сделать монохром и проткнуть его? Узнаем, как Ив Кляйн и Лучо Фонтана повлияли на творчество друг друга и почему их так не любили зрители.
+            </p>
+          </article>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Антропометрии синего периода
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <div class="item-post__slider slick-slider">
+              <div>
+                <img src="img/slide-1.jpg" alt="Фото с перформанса Антропометрии синего периода: обнаженные модели в краске возят тела друг друга по холсту. Фото в чб.">
+              </div>
+              <div>
+                <img src="img/slide-2.jpg" alt="Фрагмент работы Антропометрии синего периода">
+              </div>
+              <div>
+                <img src="img/slide-3.jpg" alt="Фрагмент работы Антропометрии синего периода">
+              </div>
+              <div>
+                <img src="img/slide-4.jpg" alt="Фрагмент работы Антропометрии синего периода">
+              </div>
+              <div>
+                <img src="img/slide-5.jpg" alt="Фото с перформанса Антропометрии синего периода: зрители смотрят на обнаженную модель в краске. Фото в чб.">
+              </div>
+              <div>
+                <img src="img/slide-6.jpg" alt="Фото с перформанса Антропометрии синего периода: обнаженные модели в краске и Ив Кляйн. Фото в чб.">
+              </div>
+              <div>
+                <img src="img/slide-7.jpg" alt="Фрагмент работы Антропометрии синего периода. Фото в чб.">
+              </div>
+            </div>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Дэн Орешек
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  2345
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Любуемся снимками одного из самых прекрасных перформансов в истории мировой культуры. Подробный анализ от искусствоведа Клауса Помпадура и комментарии известных феминисток.
+            </p>
+          </article>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Губка Боб Синие Штанцы
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <picture class="item-post__img">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/blue-sponge.webp">
+              <source type="image/webp" srcset="img/blue-sponge-mobile.webp">
+              <source media="(min-width: 768px)" srcset="img/blue-sponge.jpg">
+              <img src="img/blue-sponge-mobile.jpg" alt="Скульптура Голубая губка">
+            </picture>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Клара Новьё
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  569
+                </b>
+              просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Как вырастить художника? Как открыть в ребёнке неудержимый дух творчества и помочь ему овладеть им? Есть рецепт: вместе с ребёнком перекрасим в синий детскую и его любимые игрушки.
+            </p>
+          </article>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Что можно выкрасить в синий у себя дома?
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <picture class="item-post__img item-post__img--pin">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/blue-monochrome-1957.webp">
+              <source type="image/webp" srcset="img/blue-monochrome-1957-mobile.webp">
+              <source media="(min-width: 768px)" srcset="img/blue-monochrome-1957.jpg">
+              <img src="img/blue-monochrome-1957-mobile.jpg" alt="Синяя стена">
+            </picture>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Ваня Шпик
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  926
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Расскажем, как привнести в интерьер Вашего дома божественный синий оттенок: что можно покрасить в синий дома (спойлер: почти всё) и зачем это делать.
+            </p>
+          </article>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Ив Кляйн – дзюдоист, дзен-буддист, творец
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <picture class="item-post__img">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/portrait.webp">
+              <source type="image/webp" srcset="img/portrait-mobile.webp">
+              <source media="(min-width: 768px)" srcset="img/portrait.jpg">
+              <img src="img/portrait-mobile.jpg" alt="Портрет Ива Кляйна на фоне его работ в чб">
+            </picture>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Вера Спонжик
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  1567
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Как дзюдо помогает в искусстве, почему французы не любили Ива и причём здесь дзен-буддизм. Подробная интерактивная биография великого художника.
+            </p>
+          </article>
+          <article class="posts__item item-post item-post--quote">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Как Башляр Кляйна вдохновил
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <div class="item-post__blockquote">
+              <p class="item-post__blockquote-text">
+                Сначала нет ничего, потом – глубокое ничто. Потом – синяя бездна.
+              </p>
+              <cite class="item-post__blockquote-author">
+                Гастон Башляр
+              </cite>
+            </div>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Инга Дальновидная
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  1280
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Разберёмся, как чувственная философия Гастона Башляра повлияла на юного Ива Кляйна и причём здесь «Внутренний мир травмы» Дональда Калшеда.
+            </p>
+          </article>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Помидоры в ушанках и умилительный веб
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <div class="item-post__wrapper-big-link">
+              <a class="item-post__big-link" href="#">
+                http://syzran-small.ru/
+              </a>
+            </div>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Марк Рубанько
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  268
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Как сделать популярное новостное медиа в городе, где ничего не происходит. Интервью с разработчиком легендарного ресурса «Маленькая Сызрань».
+            </p>
+          </article>
+          <article class="posts__item item-post">
+            <h3 class="item-post__title">
+              <a href="#" class="item-post__link">
+                Цвет настроения синий
+              </a>
+            </h3>
+            <time datetime="2018-10-08" class="item-post__time">08.10.2018</time>
+            <div class="item-post__author-wrapper">
+              <p class="item-post__author">
+                <a class="item-post__author-link" href="#">
+                  Коля Калина
+                </a>
+              </p>
+              <p class="item-post__count-views">
+                <b class="item-post__js-views">
+                  666
+                </b>
+                просмотров
+              </p>
+            </div>
+            <p class="item-post__lead">
+              Разбираемся, как Филипп Киркоров в своём новом клипе «Цвет настроения синий» воспевает неопровержимое торжество синего цвета, прикрываясь постмодернистскими заигрываниями.
+            </p>
+          </article>
+          <ul class="posts__pagination pagination">
+            <li class="pagination__item pagination__item--button">
+              <a class="pagination__link pagination__link--previous" href="#">
+                <svg width="13" height="14" aria-hidden="true" role="presentation">
+                  <use xlink:href="#s-icon-back"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link">
+                1
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                2
+              </a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">
+                3
+              </a>
+            </li>
+            <li class="pagination__item pagination__item--button">
+              <a class="pagination__link pagination__link--next" href="#">
+                <svg width="13" height="14" aria-hidden="true" role="presentation">
+                  <use xlink:href="#s-icon-next"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <div class="page-main__aside-wrapper">
+          <section class="page-main__search search">
+            <h2 class="search__title">
+              Поиск
+            </h2>
+            <form class="search__form page-search page-search--aside">
+              <label class="page-search__label page-search__label--aside" for="aside-search">
+                <svg width="22" height="22" aria-hidden="true" role="presentation">
+                  <use xlink:href="#s-icon-search"></use>
+                </svg>
+              </label>
+              <input class="page-search__input-text page-search__input-text--aside" type="search" name="main-search" id="aside-search" placeholder="Что вы ищете?">
+            </form>
+          </section>
+          <section class="page-main__tags tags">
+            <h2 class="tags__title">
+              Теги
+            </h2>
+            <ul class="tags__list">
+              <li>
+                <a href="#" class="tags__link">
+                  Ив Кляйн
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tags__link">
+                  Искусство
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tags__link">
+                  Синий
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tags__link">
+                  Сызрань
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tags__link">
+                  IKB
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tags__link">
+                  Проекты
+                </a>
+              </li>
+              <li>
+                <a href="#" class="tags__link">
+                  Цены
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="page-main__recent recent">
+            <h2 class="recent__title">
+              Популярное
+            </h2>
+            <article class="recent__post post-preview">
+              <h3 class="post-preview__title">
+                <a class="post-preview__link" href="#">
+                  «Синий, синий батя»
+                </a>
+              </h3>
+              <img class="post-preview__img" src="img/preview-man.jpg" width="80" height="80" alt="Мужчина в состоянии алкогольного делирия">
+              <p class="post-preview__lead">
+                Эффективность арт-терапии синим цветом в лечении алкоголизма.
+              </p>
+            </article>
+            <article class="recent__post post-preview">
+              <h3 class="post-preview__title">
+                <a class="post-preview__link" href="#">
+                  Оператор Кыпс в ягодном лесу (1965 г.)
+                </a>
+              </h3>
+              <img class="post-preview__img" src="img/preview-berry.jpg" width="80" height="80" alt="Спелая черника">
+              <p class="post-preview__lead">
+                Шедевр эстонской анимации о пользе синих, и не только, ягод. Смотрим всей семьёй!
+              </p>
+            </article>
+            <article class="recent__post post-preview">
+              <h3 class="post-preview__title">
+                <a class="post-preview__link" href="#">
+                  Бабушкин сундук
+                </a>
+              </h3>
+              <img class="post-preview__img" src="img/preview-clothes.jpg" width="80" height="80" alt="Синяя одежда">
+              <p class="post-preview__lead">
+                Красим в синий старую одежду и модничаем всем двором.
+              </p>
+            </article>
+            <article class="recent__post post-preview">
+              <h3 class="post-preview__title">
+                <a class="post-preview__link" href="#">
+                  Синяя Сызрань
+                </a>
+              </h3>
+              <img class="post-preview__img" src="img/preview-syzran.jpg" width="80" height="80" alt="Церковь синего цвета в Сызрани">
+              <p class="post-preview__lead">
+                Фантазируем, как бы выглядел любимый город, перекрась мы здания.
+              </p>
+            </article>
+            <article class="recent__post post-preview">
+              <h3 class="post-preview__title">
+                <a class="post-preview__link" href="#">
+                  Марокко – мекка синего
+                </a>
+              </h3>
+              <img class="post-preview__img" src="img/preview-morocco.jpg" width="80" height="80" alt="Улица в Марокко">
+              <p class="post-preview__lead">
+               Любуемся на один из самых красивых городов в мире, где очень, очень много синего.
+              </p>
+            </article>
+          </section>
+          <section class="page-main__categories categories">
+            <h2 class="categories__title">
+              Темы
+            </h2>
+            <ul class="categories__list">
+              <li>
+                <a class="categories__link" href="#">
+                  Ив Кляйн
+                </a>
+              </li>
+              <li>
+                <a class="categories__link" href="#">
+                  Синий интерьер
+                </a>
+              </li>
+              <li>
+                <a class="categories__link" href="#">
+                  Синий в мировой культуре
+                </a>
+              </li>
+              <li>
+                <a class="categories__link" href="#">
+                  Детские оттенки синего
+                </a>
+              </li>
+              <li>
+                <a class="categories__link" href="#">
+                  Синий на даче
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <section class="page-main__main-form main-form">
+        <div class="main-form__wrapper">
+          <h2 class="main-form__hiden-title">
+            Форма заказа
+          </h2>
+          <p class="main-form__description">
+            Покрасим в синий Ваш диван, чемодан, саквояж, картину, корзину, картонку и&#160;даже маленькую собачонку.<br>
+            Оставьте заявку — и мы покрасим что угодно в абсолютно любой оттенок синего!
+          </p>
+          <form class="main-form__form form-order" action="get" name="form-get">
+            <ul class="form-order__list">
+              <li class="form-order__item form-order__item--name">
+                <label class="form-order__label" for="name-client"></label>
+                <input class="form-order__input" type="text" id="name-client" placeholder="Имя*" required="">
+              </li>
+              <li class="form-order__item form-order__item--surname">
+                <label class="form-order__label" for="surname-client"></label>
+                <input class="form-order__input" type="text" id="surname-client" placeholder="Фамилия*" required="">
+              </li>
+              <li class="form-order__item form-order__item--email">
+                <label class="form-order__label" for="email-client"></label>
+                <input class="form-order__input" type="email" id="email-client" placeholder="Email*" required="">
+              </li>
+              <li class="form-order__item form-order__item--tel">
+                <label class="form-order__label" for="tel-client"></label>
+                <input class="form-order__input" type="tel" id="tel-client" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" placeholder="Тел">
+              </li>
+              <li class="form-order__item form-order__item--textarea">
+                <label class="form-order__label" for="message-client"></label>
+                <textarea class="form-order__message" id="message-client" placeholder="Что Вы мечтаете перекрасить в синий?"></textarea>
+              </li>
+            </ul>
+            <input class="button form-order__button" type="submit" value="Отправить">
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__contacts contacts">
+        <h2 class="contacts__title">
+          Напишите нам
+        </h2>
+        <ul class="contacts__list">
+          <li>
+            <a class="contacts__link" href="https://goo.gl/maps/GAEVYtQYAKn">
+              <svg width="17" height="18" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-pin"></use>
+              </svg>
+              Сызрань, ул. Ленина, д. 8
+            </a>
+          </li>
+          <li>
+            <a class="contacts__link" href="tel:+78006502038">
+              <svg width="17" height="18" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-telephone"></use>
+              </svg>
+              8-800-650-20-38
+            </a>
+          </li>
+          <li>
+            <a href="mailto:mail@iv-malyar.ru" class="contacts__link contacts__link--mail">
+              <svg width="17" height="18" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-mail"></use>
+              </svg>
+              mail@iv-malyar.ru
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-footer__links links">
+        <h2 class="links__title">
+          Полезные ссылки
+        </h2>
+        <ul class="links__list">
+          <li>
+            <a href="#" class="links__link">
+              <svg width="11" height="11" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-next"></use>
+              </svg>
+              Палитра
+            </a>
+          </li>
+          <li>
+            <a href="#" class="links__link">
+              <svg width="11" height="11" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-next"></use>
+              </svg>
+              Новости
+            </a>
+          </li>
+          <li>
+            <a href="#" class="links__link">
+              <svg width="11" height="11" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-next"></use>
+              </svg>
+              О нас
+            </a>
+          </li>
+          <li>
+            <a href="#" class="links__link">
+              <svg width="11" height="11" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-next"></use>
+              </svg>
+              Оформить заказ
+            </a>
+          </li>
+                    <li>
+            <a href="#" class="links__link">
+              <svg width="11" height="11" aria-hidden="true" role="presentation">
+                <use xlink:href="#s-icon-next"></use>
+              </svg>
+              Оформить заказ
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-footer__gallery gallery">
+        <h2 class="gallery__title">
+          Галерея
+        </h2>
+        <ul class="gallery__list">
+          <li class="gallery__item">
+            <a href="#" class="gallery__link">
+              <img class="gallery__img" src="img/preview-art-1.jpg" width="80" height="80" alt="Фрагмент картины Ива Кляйна">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a href="#" class="gallery__link">
+              <img class="gallery__img" src="img/preview-art-2.jpg" width="80" height="80" alt="Суровый котик">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a href="#" class="gallery__link">
+              <img class="gallery__img" src="img/preview-berry.jpg" width="80" height="80" alt="Спелая черника">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a href="#" class="gallery__link">
+              <img class="gallery__img" src="img/preview-clothes.jpg" width="80" height="80" alt="Синяя одежда">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a href="#" class="gallery__link">
+              <img class="gallery__img" src="img/preview-man.jpg" width="80" height="80" alt="Мужчина в состоянии алкогольного делирия">
+            </a>
+          </li>
+          <li class="gallery__item">
+            <a href="#" class="gallery__link">
+              <img class="gallery__img" src="img/preview-morocco.jpg" width="80" height="80" alt="Улица в Марокко">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <div class="page-footer__wrapper">
+        <p class="page-footer__copyright">
+          © All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/build.js"></script>
+  </body>
+</html>
