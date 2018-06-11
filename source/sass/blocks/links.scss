@@ -1,0 +1,59 @@
+.links__title {
+  margin: 0 0 30px 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+
+  @include font-bold;
+}
+
+.links__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.links__link {
+  position: relative;
+
+  display: block;
+  padding: 7px 0 8px 17px;
+
+  font-size: 12px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+
+  @include font-bold;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+
+    svg {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.links__link svg {
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  fill: rgba(255, 255, 255, 0.8);
+}

@@ -1,0 +1,104 @@
+.form-comment {
+  width: 300px;
+
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+
+.form-comment__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.form-comment__item {
+  width: 140px;
+  margin: 0 0 30px 0;
+
+  @media (min-width: 768px) {
+    width: 360px;
+    margin: 0 0 25px 0;
+  }
+
+  &--message {
+    width: 100%;
+  }
+}
+
+.form-comment__input {
+  box-sizing: border-box;
+  width: 140px;
+  padding: 0;
+
+  background-color: $grey;
+  border: 0;
+
+  @media (min-width: 768px) {
+    width: 360px;
+  }
+}
+
+.form-comment__message {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 140px;
+  padding: 0;
+
+  background-color: $grey;
+  border: 0;
+
+  resize: none;
+}
+
+.form-comment__input[placeholder],
+.form-comment__message[placeholder] {
+  padding: 15px 5px 13px 14px;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: $main;
+  letter-spacing: 0.3px;
+
+  @include font-reg;
+}
+
+.form-comment__title {
+  margin: 0;
+  padding: 0 0 30px 0;
+
+  @include single-title;
+}
+
+.form-comment__button {
+  padding: 15px 17px 15px 17px;
+
+  font-size: 18px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+
+  background-color: $blue;
+  border: none;
+  cursor: pointer;
+
+  @include font-bold;
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    outline: none;
+    box-shadow: 0 0 8px 0 $blue;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+
+    box-shadow: none;
+  }
+}

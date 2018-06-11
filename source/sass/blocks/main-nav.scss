@@ -1,0 +1,199 @@
+.main-nav {
+  position: relative;
+
+  width: 320px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    justify-content: flex-end;
+    width: 1200px;
+  }
+}
+
+.main-nav__wrapper-menu {
+  min-height: 70px;
+
+  background: #ffffff;
+
+  @media (min-width: 1200px) {
+    margin: 0 190px 0 30px;
+  }
+}
+
+.main-nav__logo-link {
+  display: block;
+  padding: 21px 5px 11px 10px;
+
+  font-size: 28px;
+  line-height: 28px;
+  text-align: right;
+  color: $main;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.7px;
+
+  @include font-extrabold;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: $blue;
+
+    svg {
+      fill: $blue;
+    }
+  }
+
+  &[href]:active {
+    color: $blue-active;
+
+    svg {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    padding: 11px 5px 11px 10px;
+
+    line-height: 47px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 11px 5px 11px 0;
+  }
+}
+
+.main-nav__logo-img {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.main-nav__logo-text {
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+
+.main-nav__search {
+  @media (min-width: 1200px) {
+    order: 3;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 25px;
+  left: 10px;
+  z-index: 1;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 5px;
+
+    width: 21px;
+    height: 2px;
+
+    background-color: $blue;
+    box-shadow: 0 6px 0 0 $blue, 0 12px 0 0 $blue;
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__site-menu,
+.main-nav--closed .main-nav__search {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.main-nav--opened {
+  @media (max-width: 767px) {
+    .main-nav__toggle {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 0;
+
+        width: 28px;
+        height: 2px;
+
+        background-color: $blue;
+        box-shadow: none;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: 0;
+
+        width: 28px;
+        height: 2px;
+
+        background-color: $blue;
+        box-shadow: none;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.main-nav--opened .main-nav__site-menu {
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 118px;
+
+    display: block;
+
+    background: #ffffff;
+  }
+}
+
+.main-nav--opened .main-nav__search {
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 70px;
+
+    display: flex;
+
+    background: #ffffff;
+  }
+}
+
+.main-nav--opened .main-nav__logo-link {
+  @media (max-width: 767px) {
+    box-shadow: 5px 9px 10px 0 rgba(0, 0, 0, 0.03);
+  }
+}

@@ -1,0 +1,114 @@
+.form-order__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 22px 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.form-order__item {
+  width: 43.75%;
+  margin: 0 0 20px 0;
+
+  @media (min-width: 1200px) {
+    width: 460px;
+  }
+
+  &--name {
+    @media (min-width: 1200px) {
+      order: 1;
+    }
+  }
+
+  &--surname {
+    @media (min-width: 1200px) {
+      order: 3;
+    }
+  }
+
+  &--email {
+    @media (min-width: 1200px) {
+      order: 2;
+    }
+  }
+
+  &--tel {
+    @media (min-width: 1200px) {
+      order: 4;
+    }
+  }
+
+  &--textarea {
+    width: 100%;
+
+    @media (min-width: 1200px) {
+      order: 5;
+    }
+  }
+}
+
+.form-order__input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+
+  border: 0;
+}
+
+.form-order__input[placeholder],
+.form-order__message[placeholder] {
+  padding: 4px 0 0 14px;
+
+  line-height: 40px;
+  letter-spacing: 0.4px;
+
+  @include font-reg;
+}
+
+.form-order__message {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 118px;
+  padding: 0;
+
+  border: 0;
+
+  resize: none;
+}
+
+.form-order__button {
+  width: 163px;
+  margin: 0;
+  padding: 14px 0 14px 0;
+
+  font-size: 18px;
+  line-height: 20px;
+  color: $main;
+  letter-spacing: 0.4px;
+
+  background-color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+
+  @include font-bold;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    outline: none;
+    box-shadow: 0 0 8px 0 $grey;
+  }
+
+  &:active {
+    color: $blue-active;
+
+    box-shadow: none;
+  }
+
+  @media (min-width: 450px) {
+    margin: 0 0 0 calc(100% - 163px);
+  }
+}

@@ -1,0 +1,61 @@
+.contacts__title {
+  margin: 0 0 35px 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+
+  @include font-bold;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.contacts__link {
+  position: relative;
+
+  display: block;
+  padding: 0 0 16px 30px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+
+  @include font-bold;
+
+  &--mail {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    svg {
+      fill: #ffffff;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.5);
+
+    svg {
+      fill: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.contacts__link svg {
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  fill: rgba(255, 255, 255, 0.8);
+}

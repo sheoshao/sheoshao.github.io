@@ -1,0 +1,269 @@
+// Общее для всех статей
+.item-post {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 300px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    max-width: 750px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 750px;
+    padding: 0;
+  }
+}
+
+.item-post__title {
+  order: -2;
+  margin: 23px 0 0 0;
+  padding: 0;
+
+  @media (min-width: 1200px) {
+    margin: 30px 0 2px 0;
+  }
+}
+
+.item-post__link {
+  margin: 0;
+  padding: 0;
+
+  font-size: 24px;
+  line-height: 36px;
+  color: $main;
+  text-decoration: none;
+  letter-spacing: 0.8px;
+
+  cursor: pointer;
+
+  @include font-extrabold;
+  @include hover-active;
+
+  @media (min-width: 768px) {
+    line-height: 20px;
+  }
+}
+
+.item-post__time {
+  order: -4;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 20px;
+  color: $blue;
+
+  @include font-bold;
+}
+
+.item-post__img {
+  position: relative;
+
+  order: -3;
+  margin: 5px 0 0 0;
+
+  transition: all 0.4s linear;
+
+  &--pin::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 1px;
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/icon-paperclip.svg");
+  }
+
+  @media (min-width: 1200px) {
+    margin: 7px 0 0 0;
+  }
+}
+
+.item-post__author-wrapper {
+  display: flex;
+  order: -1;
+  margin: 0 0 15px 0;
+
+  @media (min-width: 1200px) {
+    margin: 0 0 20px 0;
+  }
+}
+
+.item-post__author {
+  margin: 0;
+  padding: 0 24px 0 0;
+
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.item-post__author-link {
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 20px;
+  color: $main;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include hover-active;
+}
+
+.item-post__count-views {
+  margin: 0;
+  padding: 0;
+
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.item-post__js-views {
+  margin: 0;
+  padding: 0 5px 0 0;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.item-post__lead {
+  width: 290px;
+  max-height: 156px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  text-align: justify;
+
+  @media (min-width: 768px) {
+    width: 100%;
+    max-width: 750px;
+    max-height: 52px;
+  }
+}
+
+// слайдер
+.item-post__slider {
+  order: -3;
+  max-width: 750px;
+  margin: 5px 0 0 0;
+
+  @media (min-width: 1200px) {
+    margin: 7px 0 0 0;
+  }
+}
+
+// статья с цитатой вместо картинки
+.item-post__blockquote {
+  position: relative;
+
+  order: -3;
+  margin: 8px 0 0 0;
+
+  background-color: $blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 48%;
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/icon-quote.svg");
+  }
+}
+
+.item-post__blockquote-text {
+  display: block;
+  margin: 107px 0 36px 0;
+  padding: 0;
+
+  font-size: 26px;
+  line-height: 34px;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+
+  @include font-bold;
+
+  @media (min-width: 768px) {
+    width: 89%;
+    margin: 107px auto 27px auto;
+  }
+}
+
+.item-post__blockquote-author {
+  display: block;
+  width: calc(100% - 12px);
+  margin: 0;
+  padding: 0 0 45px 0;
+
+  font-size: 22px;
+  line-height: 34px;
+  text-align: right;
+  color: #ffffff;
+
+  @include font-reg;
+}
+
+// статья со ссылкой вместо картинки
+.item-post__wrapper-big-link {
+  position: relative;
+
+  order: -3;
+  margin: 7px 0 0 0;
+  padding: 50px 0 50px 0;
+
+  background-color: $blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    z-index: 1;
+
+    width: 32px;
+    height: 32px;
+
+    background-image: url("../img/icon-link.svg");
+    transform: rotate(-55deg);
+  }
+
+  @media (min-width: 768px) {
+    padding: 80px 0 80px 0;
+  }
+}
+
+.item-post__big-link {
+  display: block;
+  padding: 10px 0 10px 0;
+
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+
+  @include font-bold;
+
+  @media (min-width: 768px) {
+    padding: 10px 0 10px 30px;
+
+    font-size: 30px;
+    text-align: left;
+    letter-spacing: 0.4px;
+  }
+}

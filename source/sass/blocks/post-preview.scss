@@ -1,0 +1,40 @@
+.post-preview {
+  display: flex;
+  flex-wrap: wrap;
+
+  border-bottom: 1px solid $grey;
+}
+
+.post-preview__title {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.post-preview__link {
+  display: block;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 30px;
+  color: $main;
+  text-decoration: none;
+  letter-spacing: 0.6px;
+
+  @include hover-active;
+  @include font-bold;
+}
+
+.post-preview__img {
+  margin: 0 0 20px 0;
+}
+
+.post-preview__lead {
+  max-height: 75px;
+  margin: -105px 0 0 100px;
+  overflow: hidden;
+
+  font-size: 14px;
+  line-height: 24px;
+}

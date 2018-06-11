@@ -1,0 +1,79 @@
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+@mixin font-reg {
+  font-weight: 400;
+  font-family: "OpenSans-Regular", "Arial", sans-serif;
+  font-style: normal;
+}
+
+@mixin font-bold {
+  font-weight: 700;
+  font-family: "OpenSans-Bold", "Arial", sans-serif;
+  font-style: normal;
+}
+
+@mixin font-extrabold {
+  font-weight: 800;
+  font-family: "OpenSans-ExtraBold", "Arial", sans-serif;
+  font-style: normal;
+}
+
+@mixin font-italic {
+  font-weight: 400;
+  font-family: "OpenSans-Italic", "Arial", sans-serif;
+  font-style: italic;
+}
+
+@mixin hover-active {
+  &:hover,
+  &:focus {
+    color: $blue;
+
+    outline: none;
+  }
+
+  &:active {
+    color: $blue-active;
+  }
+}
+
+@mixin blue-line {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    right: 150px;
+
+    width: 150px;
+    height: 2px;
+
+    background-color: $blue;
+  }
+
+  @media (min-width: 768px) {
+    &::before {
+      right: 210px;
+    }
+  }
+}
+
+@mixin single-title {
+  font-size: 30px;
+  line-height: 45px;
+  color: $main;
+  letter-spacing: 0.6px;
+
+  @include font-bold;
+}

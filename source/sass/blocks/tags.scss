@@ -1,0 +1,122 @@
+.tags__hiden-title {
+  @include visually-hidden;
+}
+
+.tags__title {
+  position: relative;
+
+  margin: 50px 0 50px 0;
+  padding: 0;
+
+  font-size: 20px;
+  line-height: 20px;
+
+  @include font-bold;
+  @include blue-line;
+
+  @media (min-width: 768px) {
+    margin: 0 0 57px 0;
+  }
+}
+
+.tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &--work {
+    position: relative;
+
+    margin: 0 0 0 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -60px;
+      z-index: 8;
+
+      width: 40px;
+      height: 40px;
+
+      background-color: $grey;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: -56px;
+      z-index: 10;
+
+      width: 32px;
+      height: 32px;
+
+      background-image: url("../img/icon-briefcase.svg");
+    }
+  }
+
+  &--study {
+    position: relative;
+
+    margin: 0 0 0 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -60px;
+      z-index: 8;
+
+      width: 40px;
+      height: 40px;
+
+      background-color: $grey;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: -56px;
+      z-index: 10;
+
+      width: 32px;
+      height: 32px;
+
+      background-image: url("../img/icon-university.svg");
+    }
+  }
+}
+
+.tags__link {
+  display: block;
+  margin: 10px 15px 10px 0;
+  padding: 11px 15px 10px 15px;
+
+  font-size: 14px;
+  line-height: 20px;
+  color: $main;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+
+  background-color: $grey;
+
+  &--article {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+
+    background-color: $blue;
+  }
+
+  &:active {
+    background-color: $blue-active;
+  }
+}
